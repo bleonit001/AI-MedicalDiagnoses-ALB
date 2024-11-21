@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, jsonify  
 from rapidfuzz import process# type: ignore # Import jsonify
-from fuzzywuzzy import process# type: ignore # Import jsonify
+# from fuzzywuzzy import process# type: ignore # Import jsonify
 import numpy as np
 import pandas as pd
 import pickle
