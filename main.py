@@ -1,4 +1,6 @@
-from flask import Flask, request, render_template, jsonify  # Import jsonify
+from flask import Flask, request, render_template, jsonify  
+from rapidfuzz import process# type: ignore # Import jsonify
+from fuzzywuzzy import process# type: ignore # Import jsonify
 import numpy as np
 import pandas as pd
 import pickle
@@ -30,28 +32,27 @@ svc = pickle.load(open('/Users/bleonitshillova/Desktop/Medical-Diagnoses SHQIP/s
 # custome and helping functions
 #==========================helper funtions================
 def helper(dis):
-    # Fetch the description from the description DataFrame
-    desc = description[description['Sëmundje'] == dis]['përshkrimi']
-    desc = " ".join([w for w in desc]) if not desc.empty else "Asnjë përshkrim i disponueshëm"
+    # Normalize and fetch description
+    desc = description[description['Sëmundje'].str.strip().str.lower() == dis.strip().lower()]['përshkrimi']
+    desc = " ".join(desc.tolist()) if not desc.empty else "Asnjë përshkrim i disponueshëm"
 
-    # Fetch precautions for the disease, if available
-    pre = precautions[precautions['Sëmundje'] == dis][['Masaparaprake_1', 'Masaparaprake_2', 'Masaparaprake_3', 'Masaparaprake_4']]
-    if pre.empty:
-        pre = ["Asnjë Masaparaprake e disponueshëm"]
-    else:
-        pre = pre.values[0]  # Take the first row of the precaution values
+    # Normalize and fetch precautions
+    pre = precautions[precautions['Sëmundje'].str.strip().str.lower() == dis.strip().lower()][
+        ['Masaparaprake_1', 'Masaparaprake_2', 'Masaparaprake_3', 'Masaparaprake_4']
+    ]
+    pre = [x for x in pre.values[0] if pd.notna(x)] if not pre.empty else ["Asnjë Masaparaprake e disponueshëm"]
 
-    # Fetch medications for the disease, if available
-    med = medications[medications['Sëmundje'] == dis]['mjekim']
+    # Fetch medications
+    med = medications[medications['Sëmundje'].str.strip().str.lower() == dis.strip().lower()]['mjekim']
     med = med.tolist() if not med.empty else ["Asnjë medikament i disponueshëm"]
 
-    # Fetch diet recommendations for the disease, if available
-    die = diets[diets['Sëmundje'] == dis]['Diet']
+    # Fetch diet recommendations
+    die = diets[diets['Sëmundje'].str.strip().str.lower() == dis.strip().lower()]['Diet']
     die = die.tolist() if not die.empty else ["Asnjë diet rekomanduese e disponueshëm"]
 
-    # Fetch workout suggestions for the disease, if available
-    wrkout = workout[workout['Sëmundje'] == dis]['stërvitje']
-    wrkout = wrkout.tolist() if not wrkout.empty else ["Asnjë terapi rerekomanduese e disponueshëm"]
+    # Fetch workout suggestions
+    wrkout = workout[workout['Sëmundje'].str.strip().str.lower() == dis.strip().lower()]['stërvitje']
+    wrkout = wrkout.tolist() if not wrkout.empty else ["Asnjë terapi rekomanduese e disponueshëm"]
 
     return desc, pre, med, die, wrkout
 
@@ -142,6 +143,26 @@ diseases_list = {
   35:"Psoriasis",
   27:"Impetigo"
 }
+
+def match_symptom(user_input, symptoms_list):
+    """
+    Matches user input symptom with the closest one in the symptoms list.
+    
+    Args:
+        user_input (str): The symptom entered by the user.
+        symptoms_list (list): List of predefined symptoms.
+
+    Returns:
+        str: The best match from symptoms_list.
+    """
+    match, score = process.extractOne(user_input, symptoms_list)
+    if score > 80:  # Only return if similarity score is above 80%
+        return match
+    else:
+        return None
+
+
+
 # Model Prediction function
 def get_predicted_value(patient_symptoms):
     input_vector = np.zeros(132)
@@ -149,8 +170,11 @@ def get_predicted_value(patient_symptoms):
 
     symptom_found = False
     for item in normalized_symptoms:
-        if item in symptoms_dict:
-            input_vector[symptoms_dict[item]] = 1
+        # Perform approximate matching using rapidfuzz
+        best_match = process.extractOne(item, symptoms_dict.keys(), score_cutoff=80)
+        if best_match:
+            matched_symptom = best_match[0]
+            input_vector[symptoms_dict[matched_symptom]] = 1
             symptom_found = True
         else:
             print(f"Paralajmërim: Simptoma '{item}' nuk u gjet në fjalorin e simptomave")
@@ -182,36 +206,45 @@ def index():
 # Define a route for the home page
 @app.route('/predict', methods=['GET', 'POST'])
 def home():
-    if request.method == 'POST':
-        symptoms = request.form.get('symptoms', '').strip()
-        if not symptoms or symptoms.lower() == "symptoms":
-            message = "Ju lutem, futni simptoma të vlefshme, të ndara me presje."
-            return render_template('index.html', message=message)
+    try:
+        if request.method == 'POST':
+            # Get symptoms from the form and validate
+            symptoms = request.form.get('symptoms', '').strip()
+            if not symptoms or symptoms.lower() == "symptoms":
+                message = "Ju lutem, futni simptoma të vlefshme, të ndara me presje."
+                return render_template('index.html', message=message)
 
-        # Parse and clean symptoms input
-        user_symptoms = [symptom.strip() for symptom in symptoms.split(',')]
+            # Process symptoms
+            user_symptoms = [symptom.strip() for symptom in symptoms.split(',')]
+            predicted_disease = get_predicted_value(user_symptoms)
+            dis_des, precautions, medications, rec_diet, workout = helper(predicted_disease)
 
-        # Make the prediction
-        predicted_disease = get_predicted_value(user_symptoms)
-        dis_des, precautions, medications, rec_diet, workout = helper(predicted_disease)
+            # Prepare the response data
+            response_data = {
+                "predicted_disease": predicted_disease,
+                "description": dis_des,
+                "precautions": precautions,
+                "medications": medications,
+                "my_diet": rec_diet,
+                "workout": workout
+            }
 
-        # Prepare response data
-        response_data = ({
-                    "predicted_disease": predicted_disease,
-                    "description": dis_des,
-                    "precautions": precautions,
-                    "medications": medications,
-                    "my_diet": rec_diet,
-                    "workout": workout
-                })
-        # If JSON response is requested (for AJAX or API use)
-        if request.headers.get('Content-Type') == 'application/json':
-            return jsonify(response_data)
+            # Check if the request wants JSON response
+            if request.headers.get('Content-Type') == 'application/json':
+                return jsonify(response_data)
 
-        # Render response in HTML template
-        return render_template('index.html', **response_data)
+            # If not JSON, render the result in the HTML template
+            return render_template('index.html', **response_data)
 
-    return render_template('index.html')
+        # If it's a GET request, just render the page
+        return render_template('index.html')
+
+    except Exception as e:
+        # Log the error for debugging
+        app.logger.error(f"Error in /predict route: {e}")
+        
+        # Return a user-friendly error message
+        return jsonify({"error": "An unexpected error occurred. Please try again later."}), 500
 
 
 
