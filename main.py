@@ -11,54 +11,168 @@ app = Flask(__name__)
 
 # load databasedataset===================================
 # Assuming the files are in the 'datasets' folder in your project directory
-sym_des = pd.read_csv("/Users/bleonitshillova/Desktop/Medicine-Recommendation-System-Personalized-Medical-Recommendation-System-with-Machine-Learning-main/dataset/symtoms_df.csv")
-precautions = pd.read_csv("/Users/bleonitshillova/Desktop/Medicine-Recommendation-System-Personalized-Medical-Recommendation-System-with-Machine-Learning-main/dataset/precautions_df.csv")
-workout = pd.read_csv("/Users/bleonitshillova/Desktop/Medicine-Recommendation-System-Personalized-Medical-Recommendation-System-with-Machine-Learning-main/dataset/workout_df.csv")
-description = pd.read_csv("/Users/bleonitshillova/Desktop/Medicine-Recommendation-System-Personalized-Medical-Recommendation-System-with-Machine-Learning-main/dataset/description.csv")
-medications = pd.read_csv("/Users/bleonitshillova/Desktop/Medicine-Recommendation-System-Personalized-Medical-Recommendation-System-with-Machine-Learning-main/dataset/medications.csv")
-diets = pd.read_csv("/Users/bleonitshillova/Desktop/Medicine-Recommendation-System-Personalized-Medical-Recommendation-System-with-Machine-Learning-main/dataset/diets.csv")
+sym_des = pd.read_csv("/Users/bleonitshillova/Desktop/Medical-Diagnoses SHQIP/dataset/symtoms_df-sq.csv", on_bad_lines='skip')
+precautions = pd.read_csv("/Users/bleonitshillova/Desktop/Medical-Diagnoses SHQIP/dataset/precautions_df-sq.csv",on_bad_lines='skip')
+workout = pd.read_csv("/Users/bleonitshillova/Desktop/Medical-Diagnoses SHQIP/dataset/workout_df-sq.csv",on_bad_lines='skip')
+description = pd.read_csv("/Users/bleonitshillova/Desktop/Medical-Diagnoses SHQIP/dataset/description-sq.csv",on_bad_lines='skip')
+medications = pd.read_csv("/Users/bleonitshillova/Desktop/Medical-Diagnoses SHQIP/dataset/medications-sq.csv",on_bad_lines='skip')
+diets = pd.read_csv("/Users/bleonitshillova/Desktop/Medical-Diagnoses SHQIP/dataset/diets-sq.csv",on_bad_lines='skip')
 
 
 
 # load model===========================================
-svc = pickle.load(open('/Users/bleonitshillova/Desktop/Medicine-Recommendation-System-Personalized-Medical-Recommendation-System-with-Machine-Learning-main/svc.pkl','rb'))
+svc = pickle.load(open('/Users/bleonitshillova/Desktop/Medical-Diagnoses SHQIP/svc.pkl','rb'))
 
 
 #============================================================
 # custome and helping functions
 #==========================helper funtions================
+# custome and helping functions
+#==========================helper funtions================
 def helper(dis):
-    desc = description[description['Disease'] == dis]['Description']
-    desc = " ".join([w for w in desc])
+    # Fetch the description from the description DataFrame
+    desc = description[description['Sëmundje'] == dis]['përshkrimi']
+    desc = " ".join([w for w in desc]) if not desc.empty else "Asnjë përshkrim i disponueshëm"
 
-    pre = precautions[precautions['Disease'] == dis][['Precaution_1', 'Precaution_2', 'Precaution_3', 'Precaution_4']]
-    pre = [col for col in pre.values]
+    # Fetch precautions for the disease, if available
+    pre = precautions[precautions['Sëmundje'] == dis][['Masaparaprake_1', 'Masaparaprake_2', 'Masaparaprake_3', 'Masaparaprake_4']]
+    if pre.empty:
+        pre = ["Asnjë Masaparaprake e disponueshëm"]
+    else:
+        pre = pre.values[0]  # Take the first row of the precaution values
 
-    med = medications[medications['Disease'] == dis]['Medication']
-    med = [med for med in med.values]
+    # Fetch medications for the disease, if available
+    med = medications[medications['Sëmundje'] == dis]['mjekim']
+    med = med.tolist() if not med.empty else ["Asnjë medikament i disponueshëm"]
 
-    die = diets[diets['Disease'] == dis]['Diet']
-    die = [die for die in die.values]
+    # Fetch diet recommendations for the disease, if available
+    die = diets[diets['Sëmundje'] == dis]['Diet']
+    die = die.tolist() if not die.empty else ["Asnjë diet rekomanduese e disponueshëm"]
 
-    wrkout = workout[workout['disease'] == dis] ['workout']
+    # Fetch workout suggestions for the disease, if available
+    wrkout = workout[workout['Sëmundje'] == dis]['stërvitje']
+    wrkout = wrkout.tolist() if not wrkout.empty else ["Asnjë terapi rerekomanduese e disponueshëm"]
+
+    return desc, pre, med, die, wrkout
 
 
-    return desc,pre,med,die,wrkout
 
-symptoms_dict = {'itching': 0, 'skin_rash': 1, 'nodal_skin_eruptions': 2, 'continuous_sneezing': 3, 'shivering': 4, 'chills': 5, 'joint_pain': 6, 'stomach_pain': 7, 'acidity': 8, 'ulcers_on_tongue': 9, 'muscle_wasting': 10, 'vomiting': 11, 'burning_micturition': 12, 'spotting_ urination': 13, 'fatigue': 14, 'weight_gain': 15, 'anxiety': 16, 'cold_hands_and_feets': 17, 'mood_swings': 18, 'weight_loss': 19, 'restlessness': 20, 'lethargy': 21, 'patches_in_throat': 22, 'irregular_sugar_level': 23, 'cough': 24, 'high_fever': 25, 'sunken_eyes': 26, 'breathlessness': 27, 'sweating': 28, 'dehydration': 29, 'indigestion': 30, 'headache': 31, 'yellowish_skin': 32, 'dark_urine': 33, 'nausea': 34, 'loss_of_appetite': 35, 'pain_behind_the_eyes': 36, 'back_pain': 37, 'constipation': 38, 'abdominal_pain': 39, 'diarrhoea': 40, 'mild_fever': 41, 'yellow_urine': 42, 'yellowing_of_eyes': 43, 'acute_liver_failure': 44, 'fluid_overload': 45, 'swelling_of_stomach': 46, 'swelled_lymph_nodes': 47, 'malaise': 48, 'blurred_and_distorted_vision': 49, 'phlegm': 50, 'throat_irritation': 51, 'redness_of_eyes': 52, 'sinus_pressure': 53, 'runny_nose': 54, 'congestion': 55, 'chest_pain': 56, 'weakness_in_limbs': 57, 'fast_heart_rate': 58, 'pain_during_bowel_movements': 59, 'pain_in_anal_region': 60, 'bloody_stool': 61, 'irritation_in_anus': 62, 'neck_pain': 63, 'dizziness': 64, 'cramps': 65, 'bruising': 66, 'obesity': 67, 'swollen_legs': 68, 'swollen_blood_vessels': 69, 'puffy_face_and_eyes': 70, 'enlarged_thyroid': 71, 'brittle_nails': 72, 'swollen_extremeties': 73, 'excessive_hunger': 74, 'extra_marital_contacts': 75, 'drying_and_tingling_lips': 76, 'slurred_speech': 77, 'knee_pain': 78, 'hip_joint_pain': 79, 'muscle_weakness': 80, 'stiff_neck': 81, 'swelling_joints': 82, 'movement_stiffness': 83, 'spinning_movements': 84, 'loss_of_balance': 85, 'unsteadiness': 86, 'weakness_of_one_body_side': 87, 'loss_of_smell': 88, 'bladder_discomfort': 89, 'foul_smell_of urine': 90, 'continuous_feel_of_urine': 91, 'passage_of_gases': 92, 'internal_itching': 93, 'toxic_look_(typhos)': 94, 'depression': 95, 'irritability': 96, 'muscle_pain': 97, 'altered_sensorium': 98, 'red_spots_over_body': 99, 'belly_pain': 100, 'abnormal_menstruation': 101, 'dischromic _patches': 102, 'watering_from_eyes': 103, 'increased_appetite': 104, 'polyuria': 105, 'family_history': 106, 'mucoid_sputum': 107, 'rusty_sputum': 108, 'lack_of_concentration': 109, 'visual_disturbances': 110, 'receiving_blood_transfusion': 111, 'receiving_unsterile_injections': 112, 'coma': 113, 'stomach_bleeding': 114, 'distention_of_abdomen': 115, 'history_of_alcohol_consumption': 116, 'fluid_overload.1': 117, 'blood_in_sputum': 118, 'prominent_veins_on_calf': 119, 'palpitations': 120, 'painful_walking': 121, 'pus_filled_pimples': 122, 'blackheads': 123, 'scurring': 124, 'skin_peeling': 125, 'silver_like_dusting': 126, 'small_dents_in_nails': 127, 'inflammatory_nails': 128, 'blister': 129, 'red_sore_around_nose': 130, 'yellow_crust_ooze': 131}
-diseases_list = {15: 'Fungal infection', 4: 'Allergy', 16: 'GERD', 9: 'Chronic cholestasis', 14: 'Drug Reaction', 33: 'Peptic ulcer diseae', 1: 'AIDS', 12: 'Diabetes ', 17: 'Gastroenteritis', 6: 'Bronchial Asthma', 23: 'Hypertension ', 30: 'Migraine', 7: 'Cervical spondylosis', 32: 'Paralysis (brain hemorrhage)', 28: 'Jaundice', 29: 'Malaria', 8: 'Chicken pox', 11: 'Dengue', 37: 'Typhoid', 40: 'hepatitis A', 19: 'Hepatitis B', 20: 'Hepatitis C', 21: 'Hepatitis D', 22: 'Hepatitis E', 3: 'Alcoholic hepatitis', 36: 'Tuberculosis', 10: 'Common Cold', 34: 'Pneumonia', 13: 'Dimorphic hemmorhoids(piles)', 18: 'Heart attack', 39: 'Varicose veins', 26: 'Hypothyroidism', 24: 'Hyperthyroidism', 25: 'Hypoglycemia', 31: 'Osteoarthristis', 5: 'Arthritis', 0: '(vertigo) Paroymsal  Positional Vertigo', 2: 'Acne', 38: 'Urinary tract infection', 35: 'Psoriasis', 27: 'Impetigo'}
 
+
+symptoms_dict = {
+    'kruarje': 0, 'Skuqja_e_lëkurës': 1, 'shpërthimet_e_lëkurës_nyjore': 2, 
+    'teshtitje_e_vazhdueshme': 3, 'dridhje': 4, 'të_dridhura': 5, 'dhimbje_nyjesh': 6, 
+    'dhimbje_barku': 7, 'aciditeti': 8, 'ulçera_në_gjuhë': 9, 'humbje_muskujsh': 10, 
+    'të_vjella': 11, 'djegie_miktruimi': 12, 'njolla_urinimi': 13, 'lodhje': 14, 
+    'shtim_peshe': 15, 'ankthi': 16, 'duart_dhe_këmbët_e_ftohta': 17, 'ndryshimet_e_humorit': 18, 
+    'humbje_peshe': 19, 'shqetësim': 20, 'letargji': 21, 'arna_në_fyt': 22, 
+    'Niveli_i_parregullt_i_sheqerit': 23, 'kollë': 24, 'temperaturë_e_lartë': 25, 
+    'sytë_mbytur': 26, 'gulçim': 27, 'djersitje': 28, 'dehidratim': 29, 
+    'dispepsi': 30, 'dhimbje_koke': 31, 'lëkura_e_kuqe': 32, 'urina_e_errët': 33, 
+    'nauze': 34, 'humbja_e_oreksit': 35, 'dhimbje_pas_syve': 36, 'Dhimbja_e_shpinës': 37, 
+    'kapsllëk': 38, 'diarre': 39, 'ethe_të_lehta': 40, 'urina_e_verdhë': 41, 
+    'zverdhja_e_syve': 42, 'dështimi_akut_i_mëlçisë': 43, 'lëngu_mbingarkues': 44, 
+    'ënjtja_e_stomakut': 45, 'nyjet_limfatikët_e_fryrë': 46, 'Sëmundje': 47, 
+    'vizion_turbullt_dhe_i_shtrembëruar': 48, 'gëlbazë': 49, 'acarim_fyti': 50, 
+    'skuqje_e_syve': 51, 'presioni_i_sinusit': 52, 'rrjedhje_e_hundës': 53, 
+    'mbingarkesë': 54, 'dhimbje_gjoksi': 55, 'dobësi_në_gjymtyrë': 56, 'rrahje_të_shpejta_të_zemrës': 57, 
+    'dhimbje_gjatë_lëvizjeve_të_zorrëve': 58, 'dhimbje_në_rajonin_anal': 59, 'jashtëqitje_e_përgjakshme': 60, 
+    'acarim_në_anus': 61, 'Dhimbja_e_qafës': 62, 'marramendje': 63, 'ngërçe': 64, 
+    'mavijosje': 65, 'obeziteti': 66, 'këmbë_të_fryra': 67, 'enë_të_fryra_të_gjakut': 68, 
+    'Fytyra_dhe_sy_të_fryrë': 69, 'tiroidë_e_zmadhuar': 70, 'thonjtë_e_brishtë': 71, 
+    'ekstremitetet_e_fryra': 72, 'urinë_e_tepruar': 73, 'kontakte_extra_martesore': 74, 
+    'tharje_dhe_dridhje_buzesh': 75, 'të_folurit_të_paqartë': 76, 'dhimbje_gjuri': 77, 
+    'Dhimbja_e_nyjeve_të_kofshës': 78, 'dobësi_muskulare': 79, 'qafa_e_ngurtë': 80, 
+    'ënjtje_nyjesh': 81, 'Lëvizja_ngurtësi': 82, 'rrotullime_lëvizjesh': 83, 'humbja_e_ekuilibrit': 84, 
+    'paqëndrueshmëri': 85, 'dobësi_e_një_anës_trupore': 86, 'humbja_e_eres': 87, 
+    'shqetësimi_i_fshikëzës': 88, 'Furinë_me_erë_të_keqe': 89, 'Ndjenja_e_vazhdueshme_e_urinës': 90, 
+    'kalimi_i_gazeve': 91, 'kruarje_e_brendshme': 92, 'look_toksik_(tifos)': 93, 'depresioni': 94, 
+    'nervozizëm': 95, 'dhimbje_muskulore': 96, 'altered_sensorium': 97, 'njollat_e_kuqe_mbi_trup': 98, 
+    'dhimbje_barku': 99, 'menstruacione_jo_normale': 100, 'arna_diskromatike': 101, 
+    'lotim_nga_sytë': 102, 'oreksi_i_shtuar': 103, 'poliuria': 104, 'historia_familjare': 105, 
+    'mukoide_sputum': 106, 'pështymë_e_ndryshkur': 107, 'mungesë_përqendrimi': 108, 
+    'shqetësimet_vizuale': 109, 'marrja_e_transfuzionit_të_gjakut': 110, 'marrja_e_injeksioneve_josterile': 111, 
+    'koma': 112, 'gjakderdhje_në_stomak': 113, 'zgjerimi_i_barkut': 114, 'historia_e_konsumimit_të_alkoolit': 115, 
+    'lëngu_mbingarkues': 116, 'gjak_në_sputum': 117, 'venat_e_shqara_në_viç': 118, 'palpitacione': 119, 
+    'ecje_dhe_dhimbje': 120, 'puçrrat_e_mbushura_me_qelb': 121, 'pika_te_zeza': 122, 
+    'lëkundje': 123, 'lëkurë_lëkurë': 124, 'pluhuri_si_argjendi': 125, 'dhëmbëzat_e_vogla_në_thonj': 126, 
+    'thonjtë_inflamator': 127, 'flluskë': 128, 'plagë_kuqe_rreth_hundës': 129, 'kore_e_verdhë': 130, 
+    'prognoza': 131
+}
+diseases_list = {
+  15:"Infeksion mykotik",
+  4:"Alergji",
+  16:"GERD",
+  9:"Kolestaza kronike",
+  14:"Reagim i drogës",
+  33:"Sëmundja e ulçerës peptike",
+  1:"SIDA",
+  12:"Diabeti",
+  17:"Gastroenteriti",
+  6:"Astma bronkiale",
+  23:"Hipertensioni",
+  30:"Migrena",
+  7:"Spondiloza e qafës së mitrës",
+  32:"Paraliza (hemorragjia e trurit)",
+  28:"Verdhëza",
+  29:"Malaria",
+  8:"Lija e dhenve",
+  11:"Dengue",
+  37:"Tifoja",
+  40:"Hepatiti A",
+  19:"Hepatiti B",
+  20:"Hepatiti C",
+  21:"Hepatiti D",
+  22:"Hepatiti E",
+  3:"Hepatiti alkoolik",
+  36:"Tuberkulozi",
+  10:"Ftohja e zakonshme",
+  34:"Pneumonia",
+  13:"Hemorroidet dimorfike (grumbullat)",
+  18:"Sulmi në zemër",
+  39:"Venat me variçe",
+  26:"Hipotireoza",
+  24:"Hipertiroidizmi",
+  25:"Hipoglicemia",
+  31:"Osteoartrozë",
+  5:"Artriti",
+  0:"(vertigo) Vertigo Pozicionale Paroymsal",
+  2:"Aknet",
+  38: "Infeksioni i traktit urinar",
+  35:"Psoriasis",
+  27:"Impetigo"
+}
 # Model Prediction function
 def get_predicted_value(patient_symptoms):
-    input_vector = np.zeros(len(symptoms_dict))
-    for item in patient_symptoms:
-        input_vector[symptoms_dict[item]] = 1
-    return diseases_list[svc.predict([input_vector])[0]]
+    input_vector = np.zeros(132)
+    normalized_symptoms = [s.lower().strip() for s in patient_symptoms]
 
+    symptom_found = False
+    for item in normalized_symptoms:
+        if item in symptoms_dict:
+            input_vector[symptoms_dict[item]] = 1
+            symptom_found = True
+        else:
+            print(f"Paralajmërim: Simptoma '{item}' nuk u gjet në fjalorin e simptomave")
 
+    if not symptom_found:
+        return "Nuk janë futur simptoma të vlefshme."
 
+    # Debugging: Print the constructed input vector
+    print("Constructed input vector:", input_vector)
+
+    # Predict the disease index
+    try:
+        predicted_index = svc.predict([input_vector])[0]
+    except Exception as e:
+        print("Error during prediction:", str(e))
+        return "Prediction error."
+
+    return diseases_list.get(predicted_index, "Sëmundja nuk u gjet.")
 
 # creating routes========================================
+
+
 
 
 @app.route("/")
@@ -69,29 +183,33 @@ def index():
 @app.route('/predict', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
-        symptoms = request.form.get('symptoms')
-        # mysysms = request.form.get('mysysms')
-        # print(mysysms)
-        print(symptoms)
-        if symptoms =="Symptoms":
-            message = "Please either write symptoms or you have written misspelled symptoms"
+        symptoms = request.form.get('symptoms', '').strip()
+        if not symptoms or symptoms.lower() == "symptoms":
+            message = "Ju lutem, futni simptoma të vlefshme, të ndara me presje."
             return render_template('index.html', message=message)
-        else:
 
-            # Split the user's input into a list of symptoms (assuming they are comma-separated)
-            user_symptoms = [s.strip() for s in symptoms.split(',')]
-            # Remove any extra characters, if any
-            user_symptoms = [symptom.strip("[]' ") for symptom in user_symptoms]
-            predicted_disease = get_predicted_value(user_symptoms)
-            dis_des, precautions, medications, rec_diet, workout = helper(predicted_disease)
+        # Parse and clean symptoms input
+        user_symptoms = [symptom.strip() for symptom in symptoms.split(',')]
 
-            my_precautions = []
-            for i in precautions[0]:
-                my_precautions.append(i)
+        # Make the prediction
+        predicted_disease = get_predicted_value(user_symptoms)
+        dis_des, precautions, medications, rec_diet, workout = helper(predicted_disease)
 
-            return render_template('index.html', predicted_disease=predicted_disease, dis_des=dis_des,
-                                   my_precautions=my_precautions, medications=medications, my_diet=rec_diet,
-                                   workout=workout)
+        # Prepare response data
+        response_data = ({
+                    "predicted_disease": predicted_disease,
+                    "description": dis_des,
+                    "precautions": precautions,
+                    "medications": medications,
+                    "my_diet": rec_diet,
+                    "workout": workout
+                })
+        # If JSON response is requested (for AJAX or API use)
+        if request.headers.get('Content-Type') == 'application/json':
+            return jsonify(response_data)
+
+        # Render response in HTML template
+        return render_template('index.html', **response_data)
 
     return render_template('index.html')
 
@@ -102,19 +220,16 @@ def home():
 def about():
     return render_template("about.html")
 # contact view funtion and path
-@app.route('/contact')
+@app.route('/symptoms')
 def contact():
-    return render_template("contact.html")
+    return render_template("symptoms.html")
 
 # developer view funtion and path
 @app.route('/developer')
 def developer():
     return render_template("developer.html")
 
-# about view funtion and path
-@app.route('/blog')
-def blog():
-    return render_template("blog.html")
+
 
 
 if __name__ == '__main__':

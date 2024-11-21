@@ -1,0 +1,411 @@
+,Unnamed:0,Sëmundje,stërvitje
+0,0,Infeksion mykotik,Shmangniushqimetmesheqer
+1,1,Infeksion mykotik,Konsumoniprobiotikë
+2,2,Infeksion mykotik,Rritjaemarrjessëhudhrës
+3,3,Infeksion mykotik,Përfshikosinnëdietë
+4,4,Infeksion mykotik,Kufizoniushqimetepërpunuara
+5,5,Infeksion mykotik,Qëndronitëhidratuar
+6,6,Infeksion mykotik,Konsumoniçajjeshil
+7,7,Infeksion mykotik,Haniushqimetëpasuramezink
+8,8,Infeksion mykotik,PërfshishafranineIndisënëdietë
+9,9,Infeksion mykotik,Hanifrutadheperime
+10,10,Alergji,ShmangniushqimetAlergjike
+11,11,Alergji,Konsumoniushqimeanti-inflamatore
+12,12,Alergji,Përfshiniacidetyndyroreomega-3
+13,13,Alergji,Qëndronitëhidratuar
+14,14,Alergji,HaniushqimetëpasuramevitaminëC
+15,15,Alergji,Përfshiushqimetëpasuramekuercetinë
+16,16,Alergji,Konsumonimjaltëvendas
+17,17,Alergji,Kufizoniushqimetepërpunuara
+18,18,Alergji,Përfshixhenxhefilinnëdietë
+19,19,Alergji,Shmangniaditivëtartificialë
+20,20,GERD,Konsumonivaktemëtëvogla
+21,21,GERD,Shmangniushqimetnxitëse
+22,22,GERD,Haniushqimemefibratëlarta
+23,23,GERD,Kufizonikafeinëndhealkoolin
+24,24,GERD,Përtypniushqimintërësisht
+25,25,GERD,Shmangningrënienenatësvonë
+26,26,GERD,Konsumonifrutajoagrume
+27,27,GERD,Përfshiniproteinateligët
+28,28,GERD,Qëndronitëhidratuar
+29,29,GERD,Shmangnipijetegazuara
+30,30,Kolestaza kronike,Konsumoninjëdietëmepakyndyrë
+31,31,Kolestaza kronike,Haniushqimemefibratëlarta
+32,32,Kolestaza kronike,Përfshiyndyrnatëshëndetshme
+33,33,Kolestaza kronike,Kufizonikonsumiminealkoolit
+34,34,Kolestaza kronike,Qëndronitëhidratuar
+35,35,Kolestaza kronike,Konsumoniushqimetëpasurameantioksidantë
+36,36,Kolestaza kronike,Përfshiacideyndyroreomega-3
+37,37,Kolestaza kronike,Përfshiproteinateligët
+38,38,Kolestaza kronike,Kufizoniushqimetepërpunuara
+39,39,Kolestaza kronike,Shmangniushqimeteskuqura
+40,40,Reagimindajdrogës,Ndërprisnimjekiminofendues
+41,41,Reagimindajdrogës,Qëndronitëhidratuar
+42,42,Reagimiidrogës,Përfshiushqimeanti-inflamatore
+43,43,Reagimiidrogës,Konsumoniantioksidantë
+44,44,Reagimindajdrogës,Shmangniushqimetnxitëse
+45,45,Reagimiidrogës,Përfshiniacidetyndyroreomega-3
+46,46,Reagimindajdrogës,Kufizonikafeinëndhealkoolin
+47,47,Reagimindajdrogës,Qëndronitëhidratuar
+48,48,Reagimindajdrogës,Haninjëdietëtëekuilibruar
+49,49,Reagimindajdrogës,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+50,50,Ulçerapeptike,Konsumonivaktemëtëvogladhemëtëshpeshta
+51,51,Sëmundja e ulçerës peptike,Shmangniushqimetnxitëse(meerëza acide)
+52,52,Sëmundja e ulçerës peptike,Përfshiushqimemefibratëlarta
+53,53,Sëmundja e ulçerës peptike,Kufizonikafeinëndhealkoolin
+54,54,Sëmundja e ulçerës peptike,Qëndronitëhidratuar
+55,55,Ulçerapeptike,Konsumoniprobiotikë
+56,56,Sëmundja e ulçerës peptike,Përfshiproteinateligët
+57,57,Sëmundja e ulçerës peptike,Përfshiushqimetëpasurameantioksidantë
+58,58,Sëmundja e ulçerës peptike,Kufizoniushqimetepërpunuara
+59,59,Sëmundja e ulçerës peptike,Shmangniduhanindhealkoolin
+60,60,SIDA,Ndiqninjëdietëtëekuilibruardheushqyese
+61,61,SIDA,Përfshiniproteinateligët
+62,62,SIDA,Konsumoniushqimetëpasuramelëndëushqyese
+63,63,SIDA,Qëndronitëhidratuar
+64,64,SIDA,Përfshiniyndyrnatëshëndetshme
+65,65,SIDA,Shmangniushqimetepapërpunuaraosetëpapjekura
+66,66,SIDA,Kufizoniushqimetdhepijetmesheqer
+67,67,SIDA,Konsumoniushqimeqëforcojnëimunitetin
+68,68,SIDA,Merrnisuplementemerecetë
+69,69,SIDA,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+70,70,Diabeti,Monitoromarrjenekarbohidrateve
+71,71,Diabeti,Hanivaktetëbalancuara
+72,72,Diabeti,Përfshiproteinateligët
+73,73,Diabeti,Konsumoniushqimemefibratëlarta
+74,74,Diabeti,Qëndronitëhidratuar
+75,75,Diabeti,Kufizoniushqimetdhepijetmesheqer
+76,76,Diabeti,Përfshiyndyrnatëshëndetshme
+77,77,Diabeti,Monitoroniniveletesheqeritnëgjak
+78,78,Diabet,Konsultohunimenjëdietician
+79,79,Diabeti,Merrnimedikamentetepërshkruarasipasudhëzimeve
+80,80,Gastroenterit,Qëndronitëhidratuar
+81,81,Gastroenterit,Konsumonilëngjetëpastra
+82,82,Gastroenterit,NdiqnidietënBRAT(banane oriz salcëmolle bukëethekur)
+83,83,Gastroenterit,Përfshiushqimetëbuta
+84,84,Gastroenteriti,Shmangniushqimeteyndyrshmedhetëyndyrshme
+85,85,Gastroenteriti,Kufizonikafeinëndhealkoolin
+86,86,Gastroenteriti,Shmangniushqimetpikante
+87,87,Gastroenterit,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+88,88,Gastroenteriti,rifutnigradualishtushqimetengurta
+89,89,Gastroenteriti,Shmangniproduktetequmështit
+90,90,Astma bronkiale,Përfshiniushqimeanti-inflamatore
+91,91,Astma bronkiale,Konsumoniacideyndyroreomega-3
+92,92,Astma bronkiale,Kufizonimarrjenenatriumit
+93,93,Astma bronkiale,Qëndronitëhidratuar
+94,94,Astma bronkiale,Përfshiniushqimetëpasurameantioksidantë
+95,95,Astma bronkiale,Shmangniushqimetqëpërmbajnësulfit
+96,96,Astma bronkiale,Kufizoniushqimetepërpunuara
+97,97,Astma bronkiale,Konsumoniushqimetëpasuramemagnez
+98,98,Astma bronkiale,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+99,99,Astma bronkiale,Shmangniushqimetnxitëse
+100,100,Hipertensioni,NdiqnidietënDASH(Qasjedietikepërtëndaluarhipertensionin)
+101,101,Hipertensioni,Kufizonimarrjenenatriumit
+102,102,Hipertensioni,Përfshiniushqimetëpasuramekalium
+103,103,Hipertension,Qëndronitëhidratuar
+104,104,Hipertensioni,Konsumoniushqimetëpasuramekalcium
+105,105,Hipertensioni,Kufizonikonsuminealkoolit
+106,106,Hipertensioni,Përfshiniushqimetëpasuramemagnez
+107,107,Hipertensioni,Konsumoniacideyndyroreomega-3
+108,108,Hipertensioni,Kufizoniushqimetepërpunuara
+109,109,Hipertension,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+110,110,Migrena,Identifikonidheshmangniushqimetnxitëse
+111,111,Migrenë,Qëndronitëhidratuar
+112,112,Migrenë,Përfshiniushqimetëpasuramemagnez
+113,113,Migrenë,Konsumoniacideyndyroreomega-3
+114,114,Migrena,Kufizonikafeinëndhealkoolin
+115,115,Migrenë,Konsumoniushqimetëpasurameriboflavinë
+116,116,Migrenë,Kufizoniushqimetepërpunuara
+117,117,Migrenë,Mbaniorareterregulltatëvakteve
+118,118,Migrenë,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+119,119,Migrenë,Menaxhostresin
+120,120,Spondiloza e qafës së mitrës,Përfshiushqimeanti-inflamatore
+121,121,Spondiloza e qafës së mitrës,Konsumoniacideyndyroreomega-3
+122,122,Spondiloza e qafës së mitrës,PërfshiniushqimetëpasuramevitaminëD
+123,123,Spondiloza e qafës së mitrës,Qëndronitëhidratuar
+124,124,Spondiloza e qafës së mitrës,Konsumoniushqimetëpasurameantioksidantë
+125,125,Spondiloza e qafës së mitrës,Kufizoniushqimetepërpunuara
+126,126,Spondiloza e qafës së mitrës,Përfshiproteinateligët
+127,127,Spondiloza e qafës së mitrës,Praktikoniqëndriminemirë
+128,128,Spondiloza e qafës së mitrës,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+129,129,Spondiloza e qafës së mitrës,Angazhohuninëushtrimetërregullta
+130,130,Paraliza (hemorragjia e trurit),Ndiqninjëdietëtëekuilibruardheushqyese
+131,131,Paraliza (hemorragjia e trurit),Përfshiproteinateligët
+132,132,Paraliza (hemorragjia e trurit),Konsumoniushqimetëpasuramelëndëushqyese
+133,133,Paralizë(hemorragjitruri),Qëndronitëhidratuar
+134,134,Paraliza (hemorragjia e trurit),Përfshiyndyrnatëshëndetshme
+135,135,Paraliza (hemorragjia e trurit),Kufizoniushqimetdhepijetmesheqer
+136,136,Paraliza (hemorragjia e trurit),Përfshiniantioksidantë
+137,137,Paraliza (hemorragjia e trurit),KonsumoniushqimetëpasuramevitaminëK
+138,138,Paraliza (hemorragjia e trurit),Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+139,139,Paraliza (hemorragjia e trurit),Menaxhostresin
+140,140,Verdhëz,Qëndronitëhidratuar
+141,141,Verdhëza,Konsumoniushqimetëpasuramelëndëushqyese
+142,142,Verdhëza,Përfshiniushqimetëpasurameproteina
+143,143,Verdhëza,Konsumoniushqimelehtësishttëtretshme
+144,144,Verdhëza,Kufizoniushqimeteyndyrshme
+145,145,Verdhëza,Shmangnialkoolindhekafeinën
+146,146,Verdhëza,PërfshingaushqimetepasuramevitaminëC
+147,147,Verdhëza,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+148,148,Verdhëz,Pushonidheruanienergjinë
+149,149,Verdhëz,Rinisgradualishtdietënnormale
+150,150,Malaria,Qëndronitëhidratuar
+151,151,Malaria,Konsumoniushqimetëpasuramelëndëushqyese
+152,152,Malaria,Përfshiniushqimetëpasurameproteina
+153,153,Malaria,Konsumoniushqimetëpasurameantioksidantë
+154,154,Malaria,Kufizoniushqimeteyndyrshmedhetëyndyrshme
+155,155,Malaria,Shmangnialkoolindhekafeinën
+156,156,Malaria,PërfshiniushqimetëpasuramevitaminëC
+157,157,Malaria,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+158,158,Malaria,Pushonidhekursenienergjinë
+159,159,Malaria,Rinisgradualishtdietënnormale
+160,160,Liaedhenve,Qëndronitëhidratuar
+161,161,Liaedhenve,Përfshiniushqimelehtësishttëtretshme
+162,162,Lija e dhenve,PërfshiniushqimetëpasuramevitaminëC
+163,163,Liaedhenve,Konsumoniushqimetëpasurameproteina
+164,164,Liaedhenve,Përfshiushqimetëpasuramezink
+165,165,Liaedhenve,Shmangniushqimetpikantedheacide
+166,166,Liaedhenve,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+167,167,Lija e dhenve,Praktikohigjienënemirë
+168,168,Liaedhenve,Pushonidhekursenienergjinë
+169,169,Liaedhenve,Rinisgradualishtdietënnormale
+170,170,Denge,Qëndronitëhidratuar
+171,171,Denge,Përfshiniushqimetëpasuramelëndëushqyese
+172,172,Denge,KonsumoniushqimetëpasuramevitaminëCdheantioksidantë
+173,173,Denge,Kufizoniushqimeteyndyrshmedhetëyndyrshme
+174,174,Denge,Shmangnikafeinëndhealkoolin
+175,175,Denge,Përfshiniushqimetëbutadhelehtësishttëtretshme
+176,176,Dengue,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+177,177,Denge,Pushonidhekursenienergjinë
+178,178,Dengue,Rinisgradualishtdietënnormale
+179,179,Denge,Ndiqnirekomandimetmjekësore
+180,180,Tifoja,Konsumoniushqimelehtësishttëtretshme
+181,181,Tifoid,Qëndroihidratuar
+182,182,Tifoide,Përfshiniushqimetëpasuramelëndëushqyese
+183,183,Tifoja,KonsumoniushqimetëpasuramevitaminëCdheantioksidantë
+184,184,Tifoide,Përfshiniushqimetëpasurameproteina
+185,185,Tifoja,Shmangniushqimeteyndyrshmedhetëyndyrshme
+186,186,Tifoja,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+187,187,Tifoja,Rinisgradualishtdietënnormale
+188,188,Tifoid,Ndiqnirekomandimetmjekësore
+189,189,Tifoid,Shmangnialkoolindhekafeinën
+190,190,Hepatiti A,Qëndronitëhidratuar
+191,191,Hepatiti A,Konsumoniushqimetëpasuramelëndëushqyese
+192,192,Hepatiti A,Përfshiniushqimetëpasurameproteina
+193,193,Hepatiti A,Konsumoniushqimelehtësishttëtretshme
+194,194,Hepatiti A,Kufizoniushqimeteyndyrshme
+195,195,Hepatiti A,Shmangnialkoolindhekafeinën
+196,196,Hepatiti A,PërfshiniushqimetëpasuramevitaminëC
+197,197,Hepatiti A,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+198,198,Hepatiti A,Pushonidheruanienergjinë
+199,199,Hepatiti A,Rinisgradualishtdietënnormale
+200,200,Hepatiti B,Ndiqninjëdietëtëekuilibruardheushqyese
+201,201,Hepatiti B,Qëndronitëhidratuar
+202,202,Hepatiti B,Përfshiniushqimetëpasurameproteina
+203,203,Hepatiti B,Konsumoniushqimetëpasuramelëndëushqyese
+204,204,Hepatiti B,Kufizoniushqimeteyndyrshme
+205,205,Hepatiti B,Shmangnialkoolindhekafeinën
+206,206,Hepatiti B,PërfshiniushqimetëpasuramevitaminëC
+207,207,Hepatiti B,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+208,208,Hepatiti B,Pushonidhekursenienergjinë
+209,209,Hepatiti B,Rinisgradualishtdietënnormale
+210,210,Hepatiti C,Ndiqninjëdietëtëekuilibruardheushqyese
+211,211,Hepatiti C,Qëndronitëhidratuar
+212,212,Hepatiti C,Përfshiniushqimetëpasurameproteina
+213,213,Hepatiti C,Konsumoniushqimetëpasuramelëndëushqyese
+214,214,Hepatiti C,Kufizoniushqimeteyndyrshme
+215,215,Hepatiti C,Shmangnialkoolindhekafeinën
+216,216,Hepatiti C,PërfshiniushqimetëpasuramevitaminëC
+217,217,Hepatiti C,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+218,218,Hepatiti C,Pushonidhekursenienergjinë
+219,219,Hepatiti C,Rinisgradualishtdietënnormale
+220,220,Hepatiti D,Fndiqninjëdietëtëekuilibruardheushqyese
+221,221,Hepatiti D,Qëndronitëhidratuar
+222,222,Hepatiti D,Përfshiniushqimetëpasurameproteina
+223,223,Hepatiti D,Konsumoniushqimetëpasuramelëndëushqyese
+224,224,Hepatiti D,Kufizoniushqimetmeyndyrë
+225,225,Hepatiti D,Shmangnialkoolindhekafeinën
+226,226,Hepatiti D,PërfshiniushqimetëpasuramevitaminëC
+227,227,Hepatiti D,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+228,228,Hepatiti D,Pushonidhekursenienergjinë
+229,229,Hepatiti D,Rinisgradualishtdietënnormale
+230,230,Hepatiti E,Qëndronitëhidratuar
+231,231,Hepatiti E,Konsumoniushqimetëpasuramelëndëushqyese
+232,232,Hepatiti E,Përfshiniushqimetëpasurameproteina
+233,233,Hepatiti E,Konsumoniushqimelehtësishttëtretshme
+234,234,Hepatiti E,Kufizoniushqimetmeyndyrë
+235,235,Hepatiti E,Shmangnialkoolindhekafeinën
+236,236,Hepatiti E,PërfshiniushqimetëpasuramevitaminëC
+237,237,Hepatiti E,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+238,238,Hepatiti E,Pushonidheruanienergjinë
+239,239,Hepatiti E,Rinisgradualishtdietënnormale
+240,240,Hepatiti alkoolik,Shmangnikonsumiminealkoolit
+241,241,Hepatiti alkoolik,Ndiqninjëdietëtëekuilibruardheushqyese
+242,242,Hepatiti alkoolik,Qëndronitëhidratuar
+243,243,Hepatiti alkoolik,Konsumoniushqimetëpasuramelëndëushqyese
+244,244,Hepatiti alkoolik,Përfshiushqimetëpasurameproteina
+245,245,Hepatiti alkoolik,Kufizoniushqimeteyndyrshme
+246,246,Hepatiti alkoolik,Përfshiantioksidantë
+247,247,Hepatiti alkoolik,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+248,248,Hepatiti alkoolik,Pushonidheruanienergjinë
+249,249,Hepatiti alkoolik,Rinisgradualishtdietënnormale
+250,250,Tuberkulozi,Konsumoninjëdietëtëpasurmeproteina
+251,251,Tuberkulozi,Përfshiushqimetëpasuramelëndëushqyese
+252,252,Tuberkulozi,Qëndronitëhidratuar
+253,253,Tuberkulozi,KonsumoniushqimetëpasuramevitaminaAdheC
+254,254,Tuberkulozi,Përfshiniushqimetëpasuramezink
+255,255,Tuberkulozi,Kufizoniushqimetdhepijetmesheqer
+256,256,Tuberkulozi,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+257,257,Tuberkulozi,Pushonidhekursenienergjinë
+258,258,Tuberkulozi,Rinisgradualishtdietënnormale
+259,259,Tuberkulozi,Ndiqnirekomandimetmjekësore
+260,260,Ftohja e zakonshme,Qëndronitëhidratuar
+261,261,Ftohja e zakonshme,Përfshiushqimetëpasuramelëndëushqyese
+262,262,Ftohja e zakonshme,KonsumoniushqimetëpasuramevitaminëCdheantioksidantë
+263,263,Ftohja e zakonshme,Përfshiushqimetëpasuramezink
+264,264,Ftohja e zakonshme,Kufizoniushqimetdhepijetmesheqer
+265,265,Ftohja e zakonshme,Konsumonisupëpule
+266,266,Ftohja e zakonshme,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+267,267,Ftohja e zakonshme,Pushonidhekursenienergjinë
+268,268,Ftohja e zakonshme,Rinisgradualishtdietënnormale
+269,269,Ftohja e zakonshme,Ndiqnirekomandimetmjekësore
+270,270,Pneumonia,Qëndronitëhidratuar
+271,271,Pneumonia,Përfshiniushqimetëpasuramelëndëushqyese
+272,272,Pneumonia,KonsumoniushqimetëpasuramevitaminëCdheantioksidantë
+273,273,Pneumonia,Përfshiniushqimetëpasuramezink
+274,274,Pneumonia,Kufizoniushqimetdhepijetmesheqer
+275,275,Pneumonia,Konsumonisupëpule
+276,276,Pneumonia,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+277,277,Pneumonia,Pushonidhekursenienergjinë
+278,278,Pneumonia,Rinisgradualishtdietënnormale
+279,279,Pneumonia,Ndiqnirekomandimetmjekësore
+280,280,hemorroidetdimorfike(grumbullat),Konsumoniushqimemefibratëlartë
+281,281,hemorroidedimorfike(grumbulla),Qëndronitëhidratuar
+282,282,hemorroidetdimorfike(grumbullat),Përfshijnëushqimetëpasuramelëndëushqyese
+283,283,hemorroidetdimorfike(grumbullat),Konsumoniushqimetëpasurameflavonoide
+284,284,hemorroidetdimorfike(grumbullat),Kufizoniushqimetepërpunuara
+285,285,hemorroidetdimorfike(grumbullat),Shmangniushqimetpikantedhetëyndyrshme
+286,286,hemorroidedimorfike(grumbulla),Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+287,287,hemorroidedimorfike(grumbulla),Praktikonihigjienëtëmirë
+288,288,hemordimorfikkapuçët(grumbullat),rifillonigradualishtdietënnormale
+289,289,Hemorroidedimorfike(grumbulla),Ndiqnirekomandimetmjekësore
+290,290,Sulmi në zemër,Ndiqninjëdietëtëshëndetshmepërzemrën
+291,291,Sulmi në zemër,Kufizonimarrjenenatriumit
+292,292,Sulmi në zemër,Përfshiushqimetëpasuramefibra
+293,293,Sulmi në zemër,Konsumoniyndyrnatëshëndetshme
+294,294,Sulmi në zemër,Përfshiproteinateligët
+295,295,Sulmi në zemër,Kufizoniushqimetdhepijetmesheqer
+296,296,Sulmi në zemër,Qëndronitëhidratuar
+297,297,Sulmi në zemër,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+298,298,Sulmi në zemër,Ndiqnirekomandimetmjekësore
+299,299,Sulmi në zemër,Angazhohuninëushtrimetërregullta
+300,300,Venat me variçe,Konsumoninjëdietëtëpasurmefibra
+301,301,Venat me variçe,Qëndronitëhidratuar
+302,302,Venat me variçe,Përfshiniushqimetëpasuramelëndëushqyese
+303,303,Venat me variçe,Konsumoniushqimetëpasurameantioksidantë
+304,304,Venat me variçe,Kufizonimarrjenenatriumit
+305,305,Venat me variçe,Përfshiniushqimetëpasurameflavonoide
+306,306,Venat me variçe,Shmangniqëndriminnëkëmbëoseulurpërperiudhatëgjata
+307,307,Venat me variçe,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+308,308,Variçe,Ndiqnirekomandimetmjekësore
+309,309,Venat me variçe,Angazhohuninëushtrimetërregullta
+310,310,Hipotireoza,Përfshiniushqimetëpasuramejod
+311,311,Hipotireoza,Konsumoniushqimetëpasurameselen
+312,312,Hipotiroidizëm,Qëndronitëhidratuar
+313,313,Hipotireoza,Përfshiniushqimetëpasuramelëndëushqyese
+314,314,Hipotireoza,Kufizoniushqimetepërpunuara
+315,315,Hipotireoza,KonsumoniushqimetëpasuramevitaminaBdheD
+316,316,Hipotireoza,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+317,317,Hipotireoza,Ndiqnirekomandimetmjekësore
+318,318,Hipotireoza,Mbaninjëpeshëtëqëndrueshme
+319,319,Hipotireoza,Angazhohuninëushtrimetërregullta
+320,320,Hipertiroidizmi,Kufizonimarrjenejodit
+321,321,Hipertiroidizmi,Konsumoniperimekruciferenëmoderim
+322,322,Hipertiroidizmi,Qëndronitëhidratuar
+323,323,Hipertiroidizmi,Përfshiniushqimetëpasuramelëndëushqyese
+324,324,Hipertiroidizmi,Kufizonikafeinëndhealkoolin
+325,325,Hipertiroidizmi,Përfshiniacidetyndyroreomega-3
+326,326,Hipertiroidizmi,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+327,327,Hipertiroidizmi,Ndiqnirekomandimetmjekësore
+328,328,Hipertiroidizmi,Mbaninjëpeshëtëqëndrueshme
+329,329,Hipertiroidizmi,Angazhohuninëushtrimetërregullta
+330,330,Hipoglicemia,Konsumonikarbohidratekomplekse
+331,331,Hipoglicemia,Përfshiniushqimetëpasurameproteina
+332,332,Hipoglicemia,Qëndronitëhidratuar
+333,333,Hipoglicemia,Kufizoniushqimetdhepijetmesheqer
+334,334,Hipoglicemia,Konsumonivaktedheushqimetërregullta
+335,335,Hipoglikemia,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+336,336,Hipoglicemia,Monitoroniniveletesheqeritnëgjak
+337,337,Hipoglikemia,Ndiqnirekomandimetmjekësore
+338,338,Hipoglicemia,Angazhohuninëaktivitetfiziktërregullt
+339,339,Hipoglicemia,Kufizonimarrjenealkoolit
+340,340,Osteoartriti,Konsumoniushqimeanti-inflamatore
+341,341,Osteoartrozë,Përfshiniacidetyndyroreomega-3
+342,342,Osteoartrozë,Konsumoniushqimetëpasurameantioksidantë
+343,343,Osteoartrozë,Qëndronitëhidratuar
+344,344,Osteoartriti,Kufizoniushqimetepërpunuara
+345,345,Osteoartrozë,PërfshiniushqimetëpasuramevitaminëK
+346,346,Osteoartrozë,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+347,347,Osteoartriti,Ndiqnirekomandimetmjekësore
+348,348,Osteoartrozë,Angazhohuninëushtrimemendikimtëulët
+349,349,Osteoartrozë,Mbaninjëpeshëtëshëndetshme
+350,350,Artriti,Konsumoniushqimeanti-inflamatore
+351,351,Artriti,Përfshiniacidetyndyroreomega-3
+352,352,Artriti,Konsumoniushqimetëpasurameantioksidantë
+353,353,Artrit,Qëndronitëhidratuar
+354,354,Artriti,Kufizoniushqimetepërpunuara
+355,355,Artriti,PërfshiniushqimetëpasuramevitaminëK
+356,356,Artrit,Konsultohunimenjëmjekjanëprofesionistë
+357,357,Artrit,Ndiqnirekomandimetmjekësore
+358,358,Artriti,Angazhohuninëushtrimemendikimtëulët
+359,359,Artriti,Mbaninjëpeshëtëshëndetshme
+360,360,(vertigo) Vertigo Pozicionale Paroymsal,Shmangniushqimetnxitëse(kafeinë alkool)
+361,361,(vertigo) Vertigo Pozicionale Paroymsal,Kufizomarrjenenatriumit
+362,362,(vertigo) Vertigo Pozicionale Paroymsal,Qëndroihidratuar
+363,363,(vertigo) Vertigo Pozicionale Paroymsal,Konsumonixhenxhefildhexhinkobiloba
+364,364,(vertigo) Vertigo Pozicionale Paroymsal,Kufizoëmbëlsuesitartificialë
+365,365,(vertigo) Vertigo Pozicionale Paroymsal,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+366,366,(vertigo) Vertigo Pozicionale Paroymsal,Shmangnilëvizjetepaprituratëkokës
+367,367,(vertigo) Vertigo Pozicionale Paroymsal,Ndiqnirekomandimetmjekësore
+368,368,(vertigo) Vertigo Pozicionale Paroymsal,Menaxhostresin
+369,369,(vertigo) Vertigo Pozicionale Paroymsal,Kufizokafeinëndhestimuluesit
+370,370,Akne,Konsumoninjëdietëtëekuilibruar
+371,371,Aknet,Kufizoniushqimetequmështitdhemeglicemitëlartë
+372,372,Aknet,Përfshiniantioksidantë
+373,373,Akne,Qëndronitëhidratuar
+374,374,Aknet,Kufizoniushqimetepërpunuara
+375,375,Akne,Përfshiniushqimetëpasuramezink
+376,376,Akne,Konsultohunimenjëprofesionisttëkujdesittëlëkurës
+377,377,Akne,Praktikoninjëhigjienëtëmirëtëkujdesittëlëkurës
+378,378,Aknet,Kufizoniushqimetdhepijetmesheqer
+379,379,Akne,Ndiqnirekomandimetmjekësore
+380,380,Infeksioni i traktit urinar,Qëndronitëhidratuar
+381,381,Infeksioniurinar,Konsumoniprodukteboronicë
+382,382,​​Infeksioni i traktit urinar,PërfshiushqimetëpasuramevitaminëC
+383,383,Infeksioni i traktit urinar,Kufizonikafeinëndhealkoolin
+384,384,Infeksioni i traktit urinar,Konsumoniprobiotikë
+385,385,Infeksioni i traktit urinar,Shmangniushqimetpikantedheacide
+386,386,Infeksioni i traktit urinar,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+387,387,Infeksioni i traktit urinar,Ndiqnirekomandimetmjekësore
+388,388,Infeksioni i traktit urinar,Ruanihigjienënemirë
+389,389,Infeksioni i traktit urinar,Kufizoniushqimetdhepijetmesheqer
+390,390,Psoriasis,Konsumoniushqimeanti-inflamatore
+391,391,Psoriasis,Përfshiniacidetyndyroreomega-3
+392,392,Psoriasis,PërfshinianalogetëvitaminësD
+393,393,Psoriasis,Kufizonikonsuminealkoolit
+394,394,Psoriasis,Qëndronitëhidratuar
+395,395,Psoriasis,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+396,396,Psoriasis,Kufizoniushqimetepërpunuara
+397,397,Psoriasis,Ndiqnirekomandimetmjekësore
+398,398,Psoriasis,Menaxhostresin
+399,399,Psoriasis,Merrniparasyshfototerapinënëndrejtiminmjekësor
+400,400,Impetigo,Mbanihigjienëtëmirë
+401,401,Impetigo,Qëndronitëhidratuar
+402,402,Impetigo,Konsumoniushqimetëpasuramelëndëushqyese
+403,403,Impetigo,Kufizoniushqimetdhepijetmesheqer
+404,404,Impetigo,PërfshiniushqimetëpasuramevitaminëC
+405,405,Impetigo,Konsultohunimenjëprofesionisttëkujdesitshëndetësor
+406,406,Impetigo,Ndiqnirekomandimetmjekësore
+407,407,Impetigo,Shmangnigërvishtjet
+408,408,Impetigo,Merrniantibiotikëtëpërshkruar
+409,409,Impetigo,Praktikonikujdesineplagëve

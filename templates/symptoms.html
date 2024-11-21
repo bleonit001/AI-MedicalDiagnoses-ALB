@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista e Simptomave</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #ffffff, #E0F7FF);
+            font-family: 'Montserrat', sans-serif;
+            color: #476ca0;
+        }
+        .navbar {
+            background-color: #5183c9;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+        .navbar-brand img {
+            height: 50px; /* Adjusted for better alignment */
+            margin-right: 10px;
+        }
+        .container {
+            max-width: 1000px; /* Increase max-width for better layout */
+        }
+        .content-container {
+            background-color: #ffffff;
+            color: #2e4a72;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(46, 74, 114, 0.2);
+            margin-top: 20px;
+        }
+        h4 {
+            color: #2e4a72;
+            font-weight: bold;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .logo-img {
+            width: 70px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="static/logo.png" alt="Health Center Logo" class="logo-img">
+                Diagnostikimi Mjekësor me Inteligjencë Artificiale
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" aria-label="Go to Home page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about" aria-label="Learn more about us">Rreth Nesh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/developer" aria-label="Developer Information">Zhvilluesi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/symptoms" aria-label="View symptoms list">Simptomat</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="content-container">
+            <h4>Lista e Simptomave</h4>
+            <p>Ja një listë e plotë simptomash të marrë parasysh në sistemin e diagnostikimit mjekësor:</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul id="symptoms-list-left" class="list-unstyled"></ul>
+                </div>
+                <div class="col-md-6">
+                    <ul id="symptoms-list-right" class="list-unstyled"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const symptomsDict ={
+    'kruarje': 0, 'Skuqja_e_lëkurës': 1, 'shpërthimet_e_lëkurës_nyjore': 2, 
+    'teshtitje_e_vazhdueshme': 3, 'dridhje': 4, 'të_dridhura': 5, 'dhimbje_nyjesh': 6, 
+    'dhimbje_barku': 7, 'aciditeti': 8, 'ulçera_në_gjuhë': 9, 'humbje_muskujsh': 10, 
+    'të_vjella': 11, 'djegie_miktruimi': 12, 'njolla_urinimi': 13, 'lodhje': 14, 
+    'shtim_peshe': 15, 'ankthi': 16, 'duart_dhe_këmbët_e_ftohta': 17, 'ndryshimet_e_humorit': 18, 
+    'humbje_peshe': 19, 'shqetësim': 20, 'letargji': 21, 'arna_në_fyt': 22, 
+    'Niveli_i_parregullt_i_sheqerit': 23, 'kollë': 24, 'temperaturë_e_lartë': 25, 
+    'sytë_mbytur': 26, 'gulçim': 27, 'djersitje': 28, 'dehidratim': 29, 
+    'dispepsi': 30, 'dhimbje_koke': 31, 'lëkura_e_kuqe': 32, 'urina_e_errët': 33, 
+    'nauze': 34, 'humbja_e_oreksit': 35, 'dhimbje_pas_syve': 36, 'Dhimbja_e_shpinës': 37, 
+    'kapsllëk': 38, 'diarre': 39, 'ethe_të_lehta': 40, 'urina_e_verdhë': 41, 
+    'zverdhja_e_syve': 42, 'dështimi_akut_i_mëlçisë': 43, 'lëngu_mbingarkues': 44, 
+    'ënjtja_e_stomakut': 45, 'nyjet_limfatikët_e_fryrë': 46, 'Sëmundje': 47, 
+    'vizion_turbullt_dhe_i_shtrembëruar': 48, 'gëlbazë': 49, 'acarim_fyti': 50, 
+    'skuqje_e_syve': 51, 'presioni_i_sinusit': 52, 'rrjedhje_e_hundës': 53, 
+    'mbingarkesë': 54, 'dhimbje_gjoksi': 55, 'dobësi_në_gjymtyrë': 56, 'rrahje_të_shpejta_të_zemrës': 57, 
+    'dhimbje_gjatë_lëvizjeve_të_zorrëve': 58, 'dhimbje_në_rajonin_anal': 59, 'jashtëqitje_e_përgjakshme': 60, 
+    'acarim_në_anus': 61, 'Dhimbja_e_qafës': 62, 'marramendje': 63, 'ngërçe': 64, 
+    'mavijosje': 65, 'obeziteti': 66, 'këmbë_të_fryra': 67, 'enë_të_fryra_të_gjakut': 68, 
+    'Fytyra_dhe_sy_të_fryrë': 69, 'tiroidë_e_zmadhuar': 70, 'thonjtë_e_brishtë': 71, 
+    'ekstremitetet_e_fryra': 72, 'urinë_e_tepruar': 73, 'kontakte_extra_martesore': 74, 
+    'tharje_dhe_dridhje_buzesh': 75, 'të_folurit_të_paqartë': 76, 'dhimbje_gjuri': 77, 
+    'Dhimbja_e_nyjeve_të_kofshës': 78, 'dobësi_muskulare': 79, 'qafa_e_ngurtë': 80, 
+    'ënjtje_nyjesh': 81, 'Lëvizja_ngurtësi': 82, 'rrotullime_lëvizjesh': 83, 'humbja_e_ekuilibrit': 84, 
+    'paqëndrueshmëri': 85, 'dobësi_e_një_anës_trupore': 86, 'humbja_e_eres': 87, 
+    'shqetësimi_i_fshikëzës': 88, 'Furinë_me_erë_të_keqe': 89, 'Ndjenja_e_vazhdueshme_e_urinës': 90, 
+    'kalimi_i_gazeve': 91, 'kruarje_e_brendshme': 92, 'look_toksik_(tifos)': 93, 'depresioni': 94, 
+    'nervozizëm': 95, 'dhimbje_muskulore': 96, 'altered_sensorium': 97, 'njollat_e_kuqe_mbi_trup': 98, 
+    'dhimbje_barku': 99, 'menstruacione_jo_normale': 100, 'arna_diskromatike': 101, 
+    'lotim_nga_sytë': 102, 'oreksi_i_shtuar': 103, 'poliuria': 104, 'historia_familjare': 105, 
+    'mukoide_sputum': 106, 'pështymë_e_ndryshkur': 107, 'mungesë_përqendrimi': 108, 
+    'shqetësimet_vizuale': 109, 'marrja_e_transfuzionit_të_gjakut': 110, 'marrja_e_injeksioneve_josterile': 111, 
+    'koma': 112, 'gjakderdhje_në_stomak': 113, 'zgjerimi_i_barkut': 114, 'historia_e_konsumimit_të_alkoolit': 115, 
+    'lëngu_mbingarkues': 116, 'gjak_në_sputum': 117, 'venat_e_shqara_në_viç': 118, 'palpitacione': 119, 
+    'ecje_dhe_dhimbje': 120, 'puçrrat_e_mbushura_me_qelb': 121, 'pika_te_zeza': 122, 
+    'lëkundje': 123, 'lëkurë_lëkurë': 124, 'pluhuri_si_argjendi': 125, 'dhëmbëzat_e_vogla_në_thonj': 126, 
+    'thonjtë_inflamator': 127, 'flluskë': 128, 'plagë_kuqe_rreth_hundës': 129, 'kore_e_verdhë': 130, 
+    'prognoza': 131};
+
+        const symptoms = Object.keys(symptomsDict);
+        const midIndex = Math.ceil(symptoms.length / 2);
+        const leftColumn = symptoms.slice(0, midIndex);
+        const rightColumn = symptoms.slice(midIndex);
+
+        const renderSymptoms = (symptoms, elementId) => {
+    const ul = document.getElementById(elementId);
+    symptoms.forEach(symptom => {
+        const li = document.createElement('li');
+        li.textContent = symptom; // Keep the underscores
+        ul.appendChild(li);
+    });
+};
+       
+
+        renderSymptoms(leftColumn, 'symptoms-list-left');
+        renderSymptoms(rightColumn, 'symptoms-list-right');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

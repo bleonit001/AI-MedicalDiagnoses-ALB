@@ -19,7 +19,7 @@
             font-weight: bold;
         }
         .navbar-brand img {
-            height: 40px;
+            height: 50px;  /* Adjusted size for better visibility */
             margin-right: 10px;
         }
         .container {
@@ -71,12 +71,11 @@
             border: none;
         }
         .logo-img {
-    width: 70px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
-    /* //object-fit: cover; */
-    border-radius: 50%; /* Makes the image round */
-    margin-right: 10px; /* Adds spacing if needed */
-}
+            width: 70px;
+            height: 70px; /* Adjusted for better alignment */
+            border-radius: 50%;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -84,7 +83,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="static/logo.png" alt="Health Center Logo" class="rounded-circle logo-img">
-                AI MEDICAL DIAGNOSES
+                Diagnostikimi Mjekësor me Inteligjencë Artificiale
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -92,13 +91,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/">Ballina</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link" href="/about">Rreth Nesh</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/developer">Developer</a>
+                        <a class="nav-link" href="/developer">Zhvilluesi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/symptoms">Simptomat</a>
                     </li>
                 </ul>
             </div>
@@ -107,13 +109,13 @@
 
     <div class="container mt-5">
         <div class="form-container">
-            <h2>Symptom Checker</h2>
+            <h2>Simptomat</h2>
             <form method="POST" action="/predict">
                 <div class="mb-3">
-                    <label for="symptoms" class="form-label">Enter Symptoms (comma-separated)</label>
-                    <input type="text" class="form-control" id="symptoms" name="symptoms" placeholder="e.g., headache, nausea" required>
+                    <label for="symptoms" class="form-label">Futni Simptomat (të ndara me presje)</label>
+                    <input type="text" class="form-control" id="symptoms" name="symptoms" placeholder="p.sh., kruarje, skuqje" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Check</button>
+                <button type="submit" class="btn btn-primary">Kontrollo</button>
             </form>
 
             {% if message %}
@@ -122,12 +124,12 @@
 
             {% if predicted_disease %}
                 <div class="result-container mt-4">
-                    <h4>Predicted Disease: {{ predicted_disease }}</h4>
-                    <p><strong>Description:</strong> {{ dis_des }}</p>
-                    <p><strong>Precautions:</strong> {{ my_precautions | join(', ') }}</p>
-                    <p><strong>Medications:</strong> {{ medications | join(', ') }}</p>
-                    <p><strong>Diet Recommendations:</strong> {{ my_diet | join(', ') }}</p>
-                    <p><strong>Recommended Workouts:</strong> {{ workout | join(', ') }}</p>
+                    <h4>Sëmundja e Parashikuar: {{ predicted_disease }}</h4>
+                    <p><strong>Përshkrimi:</strong> {{ description }}</p>
+                    <p><strong>Masat paraprake:</strong> {{ precautions | join(', ') }}</p>
+                    <p><strong>Medikamentet:</strong> {{ medications | join(', ') }}</p>
+                    <p><strong>Diet Rekomanduese:</strong> {{ my_diet | join(', ') }}</p>
+                    <p><strong>Terapia Rekomanduese:</strong> {{ workout | join(', ') }}</p>
                 </div>
             {% endif %}
         </div>
