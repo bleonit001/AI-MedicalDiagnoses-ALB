@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI MEDICAL DIAGNOSES</title>
+    <title> Diagnoza Mjekësore me Inteligjencë Artificiale</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -11,23 +11,56 @@
             font-family: 'Montserrat', sans-serif;
             color: #476ca0;
         }
+    
         .navbar {
-            background-color: #5183c9;
+            background-color: #1f6fc0;
         }
-        .navbar-brand, .nav-link {
+    
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+    
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-left: -200px;
+        }
+    
+        .navbar-brand span {
+            font-weight: bold;
+            color: #ffffff;
+        }
+    
+        .nav-link {
             color: #ffffff !important;
             font-weight: bold;
+            transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
         }
-        .navbar-brand img {
-            height: 50px; /* Adjusted for better alignment */
-            margin-right: 10px;
+    
+        .nav-link:hover {
+            color: #5183c9 !important;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 5px 10px;
         }
+    
+        .navbar-nav {
+            margin-right: -100px;
+        }
+    
         .navbar-nav .nav-item {
-            margin-left: 15px; /* Adding some margin for spacing */
+            margin-left: 10px;
         }
+    
         .container {
-            max-width: 1000px;
+            max-width: 1000px; /* Unified maximum width for layout */
+          
         }
+    
+        .content-container,
         .form-container {
             background-color: #ffffff;
             color: #2e4a72;
@@ -36,11 +69,19 @@
             box-shadow: 0 4px 20px rgba(46, 74, 114, 0.2);
             margin-top: 20px;
         }
+    
+        .content-container h4,
         .form-container h2 {
             color: #2e4a72;
             font-weight: bold;
             text-align: center;
         }
+    
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
         .btn-primary {
             background-color: #268AF3;
             border-color: #268AF3;
@@ -48,58 +89,82 @@
             padding: 10px;
             width: 100%;
         }
+    
         .btn-primary:hover {
             background-color: #1f6fc0;
             border-color: #1f6fc0;
         }
+    
         .result-container {
-            margin-top: 30px;
-            padding: 20px;
+            margin-top: 20px;
+            padding: 40px;
             background-color: #f1faff;
             border-radius: 15px;
             border: 1px solid #d1e8ff;
             box-shadow: 0 4px 15px rgba(38, 138, 243, 0.2);
         }
+    
         .result-container h4 {
             color: #268AF3;
             font-weight: bold;
             margin-bottom: 15px;
         }
+    
         .result-container p {
             margin-bottom: 10px;
         }
+    
         .alert-warning {
             background-color: #ffebc1;
             color: #856404;
             border: none;
         }
+    
         .logo-img {
-            width: 70px;
-            height: 70px; /* Adjusted for better alignment */
+            width: 50px;
+            height: 50px; /* Unified size */
             border-radius: 50%;
             margin-right: 10px;
         }
+    
         @media (max-width: 768px) {
             .navbar-nav {
                 text-align: center;
             }
+    
             .navbar-nav .nav-item {
-                margin-left: 0; /* Remove left margin for smaller screens */
-                margin-top: 10px; /* Add top margin for spacing */
+                margin-left: 0;
+                margin-top: 10px;
             }
+            .navbar-brand span {
+                margin-left: 100
+            }
+    
             .logo-img {
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
+            }
+    
+            .content-container,
+            .form-container {
+                padding: 20px;
+            }
+    
+            .btn-primary {
+                padding: 8px;
+                font-size: 14px;
             }
         }
     </style>
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="static/logo.png" alt="Health Center Logo" class="logo-img">
-                Diagnoza Mjekësore me Inteligjencë Artificiale
+            <a class="navbar-brand" href="/">
+              <img src="static/logo.png" alt="Health Center Logo" class="rounded-circle logo-img">
+              Diagnoza Mjekësore me Inteligjencë Artificiale
+
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -107,16 +172,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/" aria-label="Go to Home page">Ballina</a>
+                        <a class="nav-link" href="/">Ballina</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about" aria-label="Learn more about us">Rreth Nesh</a>
+                        <a class="nav-link" href="/about">Rreth Nesh</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/developer" aria-label="Developer Information">Zhvilluesi</a>
+                        <a class="nav-link" href="/developer">Zhvilluesi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/symptoms" aria-label="View symptoms list">Simptomat</a>
+                        <a class="nav-link" href="/symptoms">Simptomat</a>
                     </li>
                 </ul>
             </div>

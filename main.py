@@ -236,28 +236,28 @@ def home():
             # If not JSON, render the result in the HTML template
             return render_template('index.html', **response_data)
 
-        # If it's a GET request, just render the page
+   
         return render_template('index.html')
 
     except Exception as e:
-        # Log the error for debugging
+   
         app.logger.error(f"Error in /predict route: {e}")
         
-        # Return a user-friendly error message
+       
         return jsonify({"error": "An unexpected error occurred. Please try again later."}), 500
 
 
 
-# about view funtion and path
+
 @app.route('/about')
 def about():
     return render_template("about.html")
-# contact view funtion and path
+
 @app.route('/symptoms')
 def contact():
     return render_template("symptoms.html")
 
-# developer view funtion and path
+
 @app.route('/developer')
 def developer():
     return render_template("developer.html")

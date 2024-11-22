@@ -12,16 +12,48 @@
             color: #476ca0;
         }
         .navbar {
-            background-color: #5183c9;
-        }
-        .navbar-brand, .nav-link {
-            color: #ffffff !important;
-            font-weight: bold;
-        }
-        .navbar-brand img {
-            height: 50px; /* Adjusted for better alignment */
-            margin-right: 10px;
-        }
+        background-color: #1f6fc0;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+        margin-left: -200px;
+    }
+
+    .navbar-brand span {
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .nav-link {
+        color: #ffffff !important;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    .nav-link:hover {
+        color: #5183c9 !important;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 5px 10px;
+    }
+    .navbar-nav {
+        margin-right: -100px;
+
+
+    }
+    .navbar-nav .nav-item {
+        margin-left: 10px;
+      
+    }
         .container {
             max-width: 1000px; /* Increase max-width for better layout */
         }
@@ -47,13 +79,18 @@
             border-radius: 50%;
             margin-right: 10px;
         }
+        .navbar-nav {
+        margin-right: -100px;
+
+
+    }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
               <img src="static/logo.png" alt="Health Center Logo" class="rounded-circle logo-img">
               Diagnoza Mjekësore me Inteligjencë Artificiale
 
