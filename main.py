@@ -139,7 +139,8 @@ diseases_list = {
   5:"Artriti",
   0:"(vertigo) Vertigo Pozicionale Paroymsal",
   2:"Aknet",
-  38: "Infeksioni i traktit urinar",
+#   38:"Infeksioni i traktit urinar", 
+   38:"Infeksioni i traktit urinar",
   35:"Psoriasis",
   27:"Impetigo"
 }
@@ -147,30 +148,26 @@ diseases_list = {
 def match_symptom(user_input, symptoms_list):
     """
     Matches user input symptom with the closest one in the symptoms list.
-    
     Args:
         user_input (str): The symptom entered by the user.
         symptoms_list (list): List of predefined symptoms.
-
     Returns:
-        str: The best match from symptoms_list.
+        str: The best match from symptoms_list or a message if no match.
     """
     match, score = process.extractOne(user_input, symptoms_list)
-    if score > 80:  # Only return if similarity score is above 80%
+    if score > 70:  # Allow a slightly lower score for flexibility
         return match
-    else:
-        return None
+    return None
 
 
 
-# Model Prediction function
 def get_predicted_value(patient_symptoms):
     input_vector = np.zeros(132)
     normalized_symptoms = [s.lower().strip() for s in patient_symptoms]
 
     symptom_found = False
     for item in normalized_symptoms:
-        # Perform approximate matching using rapidfuzz
+       
         best_match = process.extractOne(item, symptoms_dict.keys(), score_cutoff=80)
         if best_match:
             matched_symptom = best_match[0]
@@ -182,10 +179,10 @@ def get_predicted_value(patient_symptoms):
     if not symptom_found:
         return "Nuk janë futur simptoma të vlefshme."
 
-    # Debugging: Print the constructed input vector
+   
     print("Constructed input vector:", input_vector)
 
-    # Predict the disease index
+   
     try:
         predicted_index = svc.predict([input_vector])[0]
     except Exception as e:
@@ -208,18 +205,17 @@ def index():
 def home():
     try:
         if request.method == 'POST':
-            # Get symptoms from the form and validate
+            
             symptoms = request.form.get('symptoms', '').strip()
             if not symptoms or symptoms.lower() == "symptoms":
                 message = "Ju lutem, futni simptoma të vlefshme, të ndara me presje."
                 return render_template('index.html', message=message)
 
-            # Process symptoms
+            
             user_symptoms = [symptom.strip() for symptom in symptoms.split(',')]
             predicted_disease = get_predicted_value(user_symptoms)
             dis_des, precautions, medications, rec_diet, workout = helper(predicted_disease)
 
-            # Prepare the response data
             response_data = {
                 "predicted_disease": predicted_disease,
                 "description": dis_des,
@@ -229,11 +225,11 @@ def home():
                 "workout": workout
             }
 
-            # Check if the request wants JSON response
+            
             if request.headers.get('Content-Type') == 'application/json':
                 return jsonify(response_data)
 
-            # If not JSON, render the result in the HTML template
+            
             return render_template('index.html', **response_data)
 
    

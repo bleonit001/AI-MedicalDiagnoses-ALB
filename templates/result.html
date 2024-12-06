@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Rezultati i Diagnostikës</h1>
+    <h2>Sëmundja e parashikuar: {{ disease }}</h2>
+    <p><strong>Përshkrimi:</strong> {{ description }}</p>
+    <h3>Masa Paraprake:</h3>
+    <ul>
+        {% for precaution in precautions %}
+        <li>{{ precaution }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Medikamentet:</h3>
+    <ul>
+        {% for med in medications %}
+        <li>{{ med }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Dietat:</h3>
+    <ul>
+        {% for diet in diets %}
+        <li>{{ diet }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Stërvitjet:</h3>
+    <ul>
+        {% for workout in workout %}
+        <li>{{ workout }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Kthehu te faqja kryesore</a>
+</body>
+</html>

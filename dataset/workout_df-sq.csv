@@ -2,12 +2,12 @@
 0,0,Infeksion mykotik,Shmangni ushqimet me sheqer
 1,1,Infeksion mykotik,Konsumoni probiotikë
 2,2,Infeksion mykotik,Rritja e marrjes së hudhrës
-3,3,Infeksion mykotik,Përfshiko sin në dietë
+3,3,Infeksion mykotik,Përfshiko sin në diet
 4,4,Infeksion mykotik,Kufizoni ushqimet e përpunuara
 5,5,Infeksion mykotik,Qëndroni të hidratuar
 6,6,Infeksion mykotik,Konsumoni çaj jeshil
 7,7,Infeksion mykotik,Hani ushqimet e pasura me zin
-8,8,Infeksion mykotik,Përfshi shafranin Indisë në dietë
+8,8,Infeksion mykotik,Përfshi shafranin Indisë në diet
 9,9,Infeksion mykotik,Hani fruta dhe perime
 10,10,Alergji,Shmangni ushqimet Alergjike
 11,11,Alergji,Konsumoni ushqime anti-inflamatore
@@ -17,7 +17,7 @@
 15,15,Alergji,Përfshi ushqimet e pasura me kuercetinë
 16,16,Alergji,Konsumoni mjaltë vendas
 17,17,Alergji,Kufizoni ushqimet e përpunuara
-18,18,Alergji,Përfshi xhenxhefilin në dietë
+18,18,Alergji,Përfshi xhenxhefilin në diet
 19,19,Alergji,Shmangni aditivët artificialë
 20,20,GERD,Konsumoni vakte më të vogla
 21,21,GERD,Shmangni ushqimet nxitëse
@@ -29,7 +29,7 @@
 27,27,GERD,Përfshini proteina të lehta
 28,28,GERD,Qëndroni të hidratuar
 29,29,GERD,Shmangni pijet e gazuara
-30,30,Kolestaza kronike,Konsumoni një dietë me pak yndyrë
+30,30,Kolestaza kronike,Konsumoni një diet me pak yndyrë
 31,31,Kolestaza kronike,Hani ushqime me fibra të larta
 32,32,Kolestaza kronike,Përfshi yndyrna të shëndetshme
 33,33,Kolestaza kronike,Kufizoni konsumimin e alkoolit
@@ -47,7 +47,7 @@
 45,45,Reagim i drogës,Përfshi acide yndyrore omega-3
 46,46,Reagim i drogës,Kufizoni kafeinën dhe alkoolin
 47,47,Reagim i drogës,Qëndroni të hidratuar
-48,48,Reagim i drogës,Hani një dietë të ekuilibruar
+48,48,Reagim i drogës,Hani një diet të ekuilibruar
 49,49,Reagim i drogës,Konsultohuni me një profesionist të kujdesit shëndetësor
 50,50,Ulçera peptike,Konsumoni vakte më të vogla dhe më të shpeshta
 51,51,Sëmundja e ulçerës peptike,Shmangni ushqimet nxitëse (me erëza acide)
@@ -59,7 +59,7 @@
 57,57,Sëmundja e ulçerës peptike,Përfshi ushqimet e pasura me antioksidantë
 58,58,Sëmundja e ulçerës peptike,Kufizoni ushqimet e përpunuara
 59,59,Sëmundja e ulçerës peptike,Shmangni duhanin dhe alkoolin
-60,60,SIDA,Ndiqni një dietë të ekuilibruar dhe ushqyes
+60,60,SIDA,Ndiqni një diet të ekuilibruar dhe ushqyes
 61,61,SIDA,Përfshini proteina të lehta
 62,62,SIDA,Konsumoni ushqimet e pasura me lëndë ushqyese
 63,63,SIDA,Qëndroni të hidratuar
@@ -81,7 +81,7 @@
 79,79,Diabeti,Merrni medikamentet e përshkruara sipas udhëzimeve
 80,80,Gastroenterit,Qëndroni të hidratuar
 81,81,Gastroenterit,Konsumoni lëngje të pastra
-82,82,Gastroenterit,Ndiqni dietën BRAT (banane, oriz, salce molle, buke e thekur)
+82,82,Gastroenterit,Ndiqni dietn BRAT (banane, oriz, salce molle, buke e thekur)
 83,83,Gastroenterit,Përfshi ushqimet e buta
 84,84,Gastroenteriti,Shmangni ushqimet e yndyrshme dhe të yndyrshme
 85,85,Gastroenteriti,Kufizoni kafeinën dhe alkoolin
@@ -99,7 +99,7 @@
 97,97,Astma bronkiale,Përfshi çaj jeshil
 98,98,Astma bronkiale,Konsumoni perime dhe fruta të freskëta
 99,99,Astma bronkiale,Shmangni ushqimet që mund të shkaktojnë fryrje
-100,100,Hipertensioni,Ndiqni dietën DASH (Qasje dietike për të ndaluar hipertensionin)
+100,100,Hipertensioni,Ndiqni dietn DASH (Qasje dietike për të ndaluar hipertensionin)
 101,101,Hipertensioni,Kufizoni marrjen e natriumit
 102,102,Hipertensioni,Përfshini ushqimet e pasura me kalium
 103,103,Hipertension,Qëndroni të hidratuar
@@ -129,7 +129,7 @@
 127,127,Spondiloza e qafës së mitrës,Praktikoni qëndrimin mirë
 128,128,Spondiloza e qafës së mitrës,Konsultohuni me një profesionist të kujdesit shëndetësor
 129,129,Spondiloza e qafës së mitrës,Angazhohuni në ushtrime të rregullta
-130,130,Paraliza (hemorragjia e trurit),Ndiqni një dietë të ekuilibruar dhe ushqyese
+130,130,Paraliza (hemorragjia e trurit),Ndiqni një diet të ekuilibruar dhe ushqyese
 131,131,Paraliza (hemorragjia e trurit),Përfshi proteina të lehta
 132,132,Paraliza (hemorragjia e trurit),Konsumoni ushqimet e pasura me lëndë ushqyese
 133,133,Paraliza (hemorragjia e trurit),Qëndroni të hidratuar
@@ -148,7 +148,7 @@
 146,146,Verdhëza,Përfshini gështenja pasura me vitaminë C
 147,147,Verdhëza,Konsultohuni me një profesionist të kujdesit shëndetësor
 148,148,Verdhëza,Pushoni dhe ruani energjinë
-149,149,Verdhëza,Rinisni gradualisht dietën normale
+149,149,Verdhëza,Rinisni gradualisht dietn normale
 150,150,Malaria,Qëndroni të hidratuar
 151,151,Malaria,Konsumoni ushqime të pasura me lëndë ushqyese
 152,152,Malaria,Përfshini ushqime të pasura me proteina
@@ -158,7 +158,7 @@
 156,156,Malaria,Përfshini ushqime të pasura me vitaminë C
 157,157,Malaria,Konsultohuni me një profesionist të kujdesit shëndetësor
 158,158,Malaria,Pushoni dhe kurseni energjinë
-159,159,Malaria,Rinisni gradualisht dietën normale
+159,159,Malaria,Rinisni gradualisht dietn normale
 160,160,Lija e dhenve,Qëndroni të hidratuar
 161,161,Lija e dhenve,Përfshini ushqime lehtësisht të tretshme
 162,162,Lija e dhenve,Përfshini ushqime të pasura me vitaminë C
@@ -168,7 +168,7 @@
 166,166,Lija e dhenve,Konsultohuni me një profesionist të kujdesit shëndetësor
 167,167,Lija e dhenve,Praktikoni higjienën e mirë
 168,168,Lija e dhenve,Pushoni dhe kurseni energjinë
-169,169,Lija e dhenve,Rinisni gradualisht dietën normale
+169,169,Lija e dhenve,Rinisni gradualisht dietn normale
 170,170,Dengue,Qëndroni të hidratuar
 171,171,Dengue,Përfshini ushqime të pasura me lëndë ushqyese
 172,172,Dengue,Konsumoni ushqime të pasura me vitaminë C dhe antioksidantë
@@ -177,7 +177,7 @@
 175,175,Dengue,Përfshini ushqime të buta dhe lehtësisht të tretshme
 176,176,Dengue,Konsultohuni me një profesionist të kujdesit shëndetësor
 177,177,Dengue,Pushoni dhe kurseni energjinë
-178,178,Dengue,Rinisni gradualisht dietën normale
+178,178,Dengue,Rinisni gradualisht dietn normale
 179,179,Dengue,Ndiqni rekomandimet mjekësore
 180,180,Tifoja,Konsumoni ushqime lehtësisht të tretshme
 181,181,Tifoja,Qëndro i hidratuar
@@ -186,7 +186,7 @@
 184,184,Tifoja,Përfshini ushqime të pasura me proteina
 185,185,Tifoja,Shmangni ushqimet e yndyrshme dhe të yndyrshme
 186,186,Tifoja,Konsultohuni me një profesionist të kujdesit shëndetësor
-187,187,Tifoja,Rinisni gradualisht dietën normale
+187,187,Tifoja,Rinisni gradualisht dietn normale
 188,188,Tifoja,Ndiqni rekomandimet mjekësore
 189,189,Tifoja,Shmangni alkoolin dhe kafeinën
 190,190,hepatiti A,Qëndroni të hidratuar
@@ -198,8 +198,8 @@
 196,196,hepatiti A,Përfshini ushqime të pasura me vitaminë C
 197,197,hepatiti A,Konsultohuni me një profesionist të kujdesit shëndetësor
 198,198,hepatiti A,Pushoni dhe ruani energjinë
-199,199,hepatiti A,Rinisni gradualisht dietën normale
-200,200,Hepatiti B,Ndiqni një dietë të ekuilibruar dhe ushqyese
+199,199,hepatiti A,Rinisni gradualisht dietn normale
+200,200,Hepatiti B,Ndiqni një diet të ekuilibruar dhe ushqyese
 201,201,Hepatiti B,Qëndroni të hidratuar
 202,202,Hepatiti B,Përfshini ushqime të pasura me proteina
 203,203,Hepatiti B,Konsumoni ushqime të pasura me lëndë ushqyese
@@ -208,8 +208,8 @@
 206,206,Hepatiti B,Përfshini ushqime të pasura me vitaminë C
 207,207,Hepatiti B,Konsultohuni me një profesionist të kujdesit shëndetësor
 208,208,Hepatiti B,Pushoni dhe kurseni energjinë
-209,209,Hepatiti B,Rinisni gradualisht dietën normale
-210,210,Hepatiti C,Ndiqni një dietë të ekuilibruar dhe ushqyese
+209,209,Hepatiti B,Rinisni gradualisht dietn normale
+210,210,Hepatiti C,Ndiqni një diet të ekuilibruar dhe ushqyese
 211,211,Hepatiti C,Qëndroni të hidratuar
 212,212,Hepatiti C,Përfshini ushqime të pasura me proteina
 213,213,Hepatiti C,Konsumoni ushqime të pasura me lëndë ushqyese
@@ -218,8 +218,8 @@
 216,216,Hepatiti C,Përfshini ushqime të pasura me vitaminë C
 217,217,Hepatiti C,Konsultohuni me një profesionist të kujdesit shëndetësor
 218,218,Hepatiti C,Pushoni dhe ruani energjinë
-219,219,Hepatiti C,Rinisni gradualisht dietën normale
-220,220,Hepatiti D,Ndiqni një dietë të ekuilibruar dhe ushqyese
+219,219,Hepatiti C,Rinisni gradualisht dietn normale
+220,220,Hepatiti D,Ndiqni një diet të ekuilibruar dhe ushqyese
 221,221,Hepatiti D,Qëndroni të hidratuar
 222,222,Hepatiti D,Përfshini ushqime të pasura me proteina
 223,223,Hepatiti D,Konsumoni ushqime të pasura me lëndë ushqyese
@@ -228,7 +228,7 @@
 226,226,Hepatiti D,Përfshini ushqime të pasura me vitaminë C
 227,227,Hepatiti D,Konsultohuni me një profesionist të kujdesit shëndetësor
 228,228,Hepatiti D,Pushoni dhe kurseni energjinë
-229,229,Hepatiti D,Rinisni gradualisht dietën normale
+229,229,Hepatiti D,Rinisni gradualisht dietn normale
 230,230,Hepatiti E,Qëndroni të hidratuar
 231,231,Hepatiti E,Konsumoni ushqime të pasura me lëndë ushqyese
 232,232,Hepatiti E,Përfshini ushqime të pasura me proteina
@@ -238,9 +238,9 @@
 236,236,Hepatiti E,Përfshini ushqime të pasura me vitaminë C
 237,237,Hepatiti E,Konsultohuni me një profesionist të kujdesit shëndetësor
 238,238,Hepatiti E,Pushoni dhe ruani energjinë
-239,239,Hepatiti E,Rinisni gradualisht dietën normale
+239,239,Hepatiti E,Rinisni gradualisht dietn normale
 240,240,Hepatiti alkoolik,Shmangni konsumimin e alkoolit
-241,241,Hepatiti alkoolik,Ndiqni një dietë të ekuilibruar dhe ushqyese
+241,241,Hepatiti alkoolik,Ndiqni një diet të ekuilibruar dhe ushqyese
 242,242,Hepatiti alkoolik,Qëndroni të hidratuar
 243,243,Hepatiti alkoolik,Konsumoni ushqime të pasura me lëndë ushqyese
 244,244,Hepatiti alkoolik,Përfshini ushqime të pasura me proteina
@@ -248,8 +248,8 @@
 246,246,Hepatiti alkoolik,Përfshini antioksidantë
 247,247,Hepatiti alkoolik,Konsultohuni me një profesionist të kujdesit shëndetësor
 248,248,Hepatiti alkoolik,Pushoni dhe ruani energjinë
-249,249,Hepatiti alkoolik,Rinisni gradualisht dietën normale
-250,250,Tuberkulozi,Konsumoni një dietë të pasur me proteina
+249,249,Hepatiti alkoolik,Rinisni gradualisht dietn normale
+250,250,Tuberkulozi,Konsumoni një diet të pasur me proteina
 251,251,Tuberkulozi,Përfshini ushqime të pasura me lëndë ushqyese
 252,252,Tuberkulozi,Qëndroni të hidratuar
 253,253,Tuberkulozi,Konsumoni ushqime të pasura me vitamina A dhe C
@@ -257,7 +257,7 @@
 255,255,Tuberkulozi,Kufizoni ushqimet dhe pijet me sheqer
 256,256,Tuberkulozi,Konsultohuni me një profesionist të kujdesit shëndetësor
 257,257,Tuberkulozi,Pushoni dhe kurseni energjinë
-258,258,Tuberkulozi,Rinisni gradualisht dietën normale
+258,258,Tuberkulozi,Rinisni gradualisht dietn normale
 259,259,Tuberkulozi,Ndiqni rekomandimet mjekësore
 260,260,Ftohja e zakonshme,Qëndroni të hidratuar
 261,261,Ftohja e zakonshme,Përfshini ushqimet e pasura me lëndë ushqyese
@@ -267,7 +267,7 @@
 265,265,Ftohja e zakonshme,Konsumoni supë pule
 266,266,Ftohja e zakonshme,Konsultohuni me një profesionist të kujdesit shëndetësor
 267,267,Ftohja e zakonshme,Pushoni dhe kurseni energjinë
-268,268,Ftohja e zakonshme,Rinisni gradualisht dietën normale
+268,268,Ftohja e zakonshme,Rinisni gradualisht dietn normale
 269,269,Ftohja e zakonshme,Ndiqni rekomandimet mjekësore
 270,270,Pneumonia,Qëndroni të hidratuar
 271,271,Pneumonia,Përfshini ushqimet e pasura me lëndë ushqyese
@@ -277,7 +277,7 @@
 275,275,Pneumonia,Konsumoni supë pule
 276,276,Pneumonia,Konsultohuni me një profesionist të kujdesit shëndetësor
 277,277,Pneumonia,Pushoni dhe kurseni energjinë
-278,278,Pneumonia,Rinisni gradualisht dietën normale
+278,278,Pneumonia,Rinisni gradualisht dietn normale
 279,279,Pneumonia,Ndiqni rekomandimet mjekësore
 280,280,Hemorroidet dimorfike (grumbullat),Konsumoni ushqime me fibra të lartë
 281,281,Hemorroidet dimorfike (grumbullat),Qëndroni të hidratuar
@@ -287,9 +287,9 @@
 285,285,Hemorroidet dimorfike (grumbullat),Shmangni ushqimet pikante dhe të yndyrshme
 286,286,Hemorroidet dimorfike (grumbullat),Konsultohuni me një profesionist të kujdesit shëndetësor
 287,287,Hemorroidet dimorfike (grumbullat),Praktikoni higjienën e mirë
-288,288,Hemorroidet dimorfike (grumbullat),Rifilloni gradualisht dietën normale
+288,288,Hemorroidet dimorfike (grumbullat),Rifilloni gradualisht dietn normale
 289,289,Hemorroidet dimorfike (grumbullat),Ndiqni rekomandimet mjekësore
-290,290,Sulmi në zemër,Ndiqni një dietë të shëndetshme për zemrën
+290,290,Sulmi në zemër,Ndiqni një diet të shëndetshme për zemrën
 291,291,Sulmi në zemër,Kufizoni marrjen e natriumit
 292,292,Sulmi në zemër,Përfshini ushqimet e pasura me fibra
 293,293,Sulmi në zemër,Konsumoni yndyrna të shëndetshme
@@ -299,7 +299,7 @@
 297,297,Sulmi në zemër,Konsultohuni me një profesionist të kujdesit shëndetësor
 298,298,Sulmi në zemër,Ndiqni rekomandimet mjekësore
 299,299,Sulmi në zemër,Angazhohuni në ushtrime të rregullta
-300,300,Venat me variçe,Konsumoni një dietë të pasur me fibra
+300,300,Venat me variçe,Konsumoni një diet të pasur me fibra
 301,301,Venat me variçe,Qëndroni të hidratuar
 302,302,Venat me variçe,Përfshini ushqimet e pasura me lëndë ushqyese
 303,303,Venat me variçe,Konsumoni ushqimet e pasura me antioksidantë
@@ -369,7 +369,7 @@
 367,367,(vertigo) Vertigo Pozicionale Paroymsal,Ndiqni rekomandimet mjekësore
 368,368,(vertigo) Vertigo Pozicionale Paroymsal,Menaxhoni stresin
 369,369,(vertigo) Vertigo Pozicionale Paroymsal,Kufizoni kafeinën dhe stimuluesit
-370,370,Aknet,Konsumoni një dietë të ekuilibruar
+370,370,Aknet,Konsumoni një diet të ekuilibruar
 371,371,Aknet,Kufizoni ushqimet e qumështit dhe meglicemit të lartë
 372,372,Aknet,Përfshini antioksidantë
 373,373,Aknet,Qëndroni të hidratuar
